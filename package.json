@@ -1,0 +1,21 @@
+{
+    "name": "data-structures-and-algorithms",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest --coverage --verbose",
+        "watch": "jest --watchAll"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yasmin-401-advanced-javascript/data-structures-and-algorithms.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/yasmin-401-advanced-javascript/data-structures-and-algorithms/issues"
+    },
+    "homepage": "https://github.com/yasmin-401-advanced-javascript/data-structures-and-algorithms#readme"
+}
