@@ -9,4 +9,4 @@ What I did is **decelared** an empty array , mid to get the **first two index** 
 
 
 ## Solution
-![whiteBoard](./assets/array-shift.png)
+![whiteBoard](./assets/array-shift.jpg)
