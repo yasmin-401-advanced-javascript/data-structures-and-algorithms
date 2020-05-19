@@ -2,23 +2,22 @@
 
 
 
-function insertShiftArray(arr, val) {
-    let flag = Math.ceil(arr.length / 2);
-    // console.log(flag)
+function insertShiftArray(arr, newInd) {
+    let mid = Math.ceil(arr.length / 2);
     let newArr = new Array(arr.length + 1);
-    for (let i = 0; i <= flag; i++) {
-        if (i === flag) {
-            newArr[i] = val;
+    for (let i = 0; i <= mid; i++) {
+        if (i === mid) {
+            newArr[i] = newInd;
         } else {
             newArr[i] = arr[i];
         }
     }
-    for (let x = flag; x <= arr.length - 1; x++) {
-        newArr[x + 1] = arr[x];
+    for (let j = mid; j <= arr.length - 1; j++) {
+        newArr[j + 1] = arr[j];
     }
+    console.log(newArr)
     return newArr;
 }
-// console.log("shift");
 
 
 module.exports = insertShiftArray;
