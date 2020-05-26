@@ -5,7 +5,7 @@ function to sum matrixs
 
 ## Challenge
 
-the most challenging part was with doing the challenge without using methods like `map` & `forEach`.
+the most challenging part was with doing the challenge without using methods like `map` & `forEach` .
 
 ## Approach & Efficiency
 
