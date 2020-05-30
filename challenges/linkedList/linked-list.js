@@ -12,35 +12,34 @@ class LinkedList {
       return this;
     }
     let nextHead  = this.head;
-    while (nextHead.next) {
-      nextHead = nextHead.next;
-    }
-    nextHead.next = node;
+    this.head = node;
+    node.next = nextHead;
     return this;
   }
   include(values){
-    const node = new Node(values);
-    if (!this.head) {
-      this.head = node;
-      return this;
-    }
     let nextHead = this.head;
-    while(nextHead){
-      if(nextHead.value === values){
+    if(nextHead.value === values){
+      return true;
+    }else{
+      while(nextHead.next){
         nextHead = nextHead.next;
-        return true;
-      }else{
-        return false;
+        if(nextHead.value === values){
+          return true;
+        }
       }
     }
+    return false;
   }
+
   toString(){
     let nextHead = this.head;
-    while(nextHead){
-      let convertToString = nextHead.value;
-      let converted = String(convertToString);
-      return converted;
+    let str = `{ ${nextHead.value} } -> `;
+    while(nextHead.next){
+      nextHead = nextHead.next;
+      str += `{ ${nextHead.value} } -> `;
     }
+    str += 'NULL';
+    return str;
   }
 }
 module.exports = LinkedList;
