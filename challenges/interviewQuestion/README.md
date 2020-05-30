@@ -13,4 +13,4 @@ funtion with two for loop
 
 ## Solution
 
-![whiteBoard]()
+![whiteBoard](./assets/interview.png)
