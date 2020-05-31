@@ -14,30 +14,31 @@ class constructor & while loop
 
 #### `insert(value)`
 - time: Big O Of(1)
-- space: Big O Of(3)
+- space: Big O Of(2)
 
 #### `append(value)`
 - time: Big O Of(n)
-- space: Big O Of(3)
-
-#### `insertBefore(value,newValue)`
-- time: Big O Of(n)
-- space: Big O Of(5)
-
-#### `insertAfter(value,newValue)`
-- time: Big O Of(n)
-- space: Big O Of(5)
+- space: Big O Of(2)
 
 #### `includes(value)`
-
 - time: Big O Of(n)
-- space: Big O Of(2)
+- space: Big O Of(1)
 
 #### `toString()`
 - time: Big O Of(n)
 - space: Big O Of(2)
 
+#### `insertBefore(value,newValue)`
+- time: Big O Of(n)
+- space: Big O Of(3)
+
+#### `insertAfter(value,newValue)`
+- time: Big O Of(n)
+- space: Big O Of(3)
+
+
+
 
 ## Solution
 
-![whiteBoard]()
+![whiteBoard](./assets/linked-list.png)
