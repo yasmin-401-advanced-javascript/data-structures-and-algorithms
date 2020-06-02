@@ -1,10 +1,11 @@
 # Linked List
 
-Write a sequence of Nodes that are connected/linked to each other.
+k-th value from the end of a linked list. 
 
 ## Challenge
 
-the most challenging part was with the `toString method` and still because I couldn't solve it or test it.
+the most challeng part was how to convert the value of node to an array!
+
 
 ## Approach & Efficiency
 

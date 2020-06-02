@@ -59,4 +59,44 @@ describe('Linked List', () => {
     list.insertAfter(7,9);
     expect(list.head.next.next.next.value).toEqual(9);
   });
+  it('Where k is greater than the length of the linked list', ()=> {
+    let list = new LinkedList();
+    list.append(3);
+    list.append(5);
+    list.append(7);
+    expect(list.kthFromEnd(5)).toEqual('make sure of k value to be not equal to the length or to be less than arr.length!');
+  });
+  it('Where k and the length of the list are the same', ()=> {
+    let list = new LinkedList();
+    list.append(3);
+    list.append(5);
+    list.append(7);
+    expect(list.kthFromEnd(3)).toEqual('make sure of k value to be not equal to the length or to be less than arr.length!');
+  });
+  it('Where k and the length of the list are the same', ()=> {
+    let list = new LinkedList();
+    list.append(3);
+    list.append(5);
+    list.append(7);
+    expect(list.kthFromEnd(3)).toEqual('make sure of k value to be not equal to the length or to be less than arr.length!');
+  });
+  it('Where k is not a positive integer', ()=> {
+    let list = new LinkedList();
+    list.append(3);
+    list.append(5);
+    list.append(7);
+    expect(list.kthFromEnd(-5)).toEqual('you should type a positive number!!!');
+  });
+  it('Where the linked list is of a size 1', ()=> {
+    let list = new LinkedList();
+    list.append(3);
+    expect(list.kthFromEnd(0)).toEqual(3);
+  });
+  it('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', ()=> {
+    let list = new LinkedList();
+    list.append(3);
+    list.append(5);
+    list.append(7);
+    expect(list.kthFromEnd(1)).toEqual(5);
+  });
 });

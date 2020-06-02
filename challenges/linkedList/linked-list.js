@@ -107,5 +107,26 @@ class LinkedList {
     }
 
   }
+  kthFromEnd(k){
+    let nextHead = this.head;
+    let arr = [];
+    arr.push(this.head.value);
+    while(nextHead.next){
+      nextHead = nextHead.next;
+      arr.push(nextHead.value);
+    }
+    if(k >= arr.length){
+      return 'make sure of k value to be not equal to the length or to be less than arr.length!';
+    }
+    else if( typeof k !== 'number'){
+      return 'you should type a number!!!';
+    }
+    else if( k<0){
+      return 'you should type a positive number!!!';
+    }else {
+      return arr[arr.length-1 -k];
+    }
+  }
+
 }
 module.exports = LinkedList;
