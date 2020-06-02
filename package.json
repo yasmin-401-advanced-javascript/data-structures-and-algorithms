@@ -1,21 +1,28 @@
 {
-    "name": "data-structures-and-algorithms",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "jest --coverage --verbose",
-        "watch": "jest --watchAll"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/yasmin-401-advanced-javascript/data-structures-and-algorithms.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/yasmin-401-advanced-javascript/data-structures-and-algorithms/issues"
-    },
-    "homepage": "https://github.com/yasmin-401-advanced-javascript/data-structures-and-algorithms#readme"
+  "name": "data-structures-and-algorithms",
+  "version": "1.0.0",
+  "description": "| Code Challenge      | Link                                                                                                                                      | | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | | Array Reverse       | [challenge-01](https://github.com/yasmin-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/arrayReverse)      | | Array Shift         | [challenge-02](https://github.com/yasmin-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/arrayShift)        | | Array Binary Search | [challenge-03](https://github.com/yasmin-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/arrayBinarySearch) | | linked list         | [challenge-03](https://github.com/yasmin-401-advanced-javascript/data-structures-and-algorithms/tree/master/challenges/linkedList)        |",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage --verbose",
+    "watch": "jest --watchAll",
+    "lint": "eslint '**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasmin-401-advanced-javascript/data-structures-and-algorithms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yasmin-401-advanced-javascript/data-structures-and-algorithms/issues"
+  },
+  "homepage": "https://github.com/yasmin-401-advanced-javascript/data-structures-and-algorithms#readme",
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "jest": "^26.0.1",
+    "lint": "^0.7.0"
+  },
+  "dependencies": {}
 }

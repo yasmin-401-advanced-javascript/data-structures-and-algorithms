@@ -1,5 +1,5 @@
 'use strict';
-const Node = require('./node.js');
+const Node = require('../linkedList/node.js');
 
 class LinkedList {
   constructor() {
@@ -127,6 +127,20 @@ class LinkedList {
       return arr[arr.length-1 -k];
     }
   }
-
+  mergeLists(list1, list2){
+    let firsHead = list1.head
+    let secHead = list2.head
+    // console.log(list1,list2)
+    let storFirstHead = list1.head;
+    let storSecondHead = list2.head;
+    let str = `head -> [${firsHead.value}] -> [${secHead.value}] ->`
+    // console.log(storFirstHead.next)
+    while(storFirstHead.next && storSecondHead.next ){
+      storFirstHead = storFirstHead.next
+      storSecondHead = storSecondHead.next
+      str += ` [${storFirstHead.value}] -> [${storSecondHead.value}] ->  `
+    }
+    return str += `X`
+  }
 }
 module.exports = LinkedList;
