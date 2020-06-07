@@ -10,9 +10,9 @@ describe('Stack', () => {
     it('Can successfully push onto a stack', () => {
       const stack = new StackAndQueues.Stack();
       stack.push(1);
-      expect(stack.top).toEqual(1);
+      expect(stack.top.value).toEqual(1);
       stack.push(2);
-      expect(stack.top).toEqual(2);
+      expect(stack.top.value).toEqual(2);
     });
     it('Can successfully push multiple values onto a stack', () => {
       const stack = new StackAndQueues.Stack();
@@ -25,7 +25,7 @@ describe('Stack', () => {
     it('Can successfully pop off the stack', () => {
       const stack = new StackAndQueues.Stack();
       stack.push(1);
-      expect(stack.pop()).toEqual(1);
+      expect(stack.pop()).toEqual({ value: 1, next: null });
       expect(stack.top).toEqual(null);
     });
     it('Can successfully empty a stack after multiple pops', () => {
@@ -33,9 +33,9 @@ describe('Stack', () => {
       stack.push(1);
       stack.push(2);
       stack.push(3);
-      expect(stack.pop()).toEqual(3);
-      expect(stack.pop()).toEqual(2);
-      expect(stack.pop()).toEqual(1);
+      expect(stack.pop()).toEqual({value: 3, next: { value: 2, next: { value: 1, next: null } } });
+      expect(stack.pop()).toEqual({value: 2, next:  { value: 1, next: null } });
+      expect(stack.pop()).toEqual( { value: 1, next: null });
       expect(stack.top).toEqual(null);
     });
   });
@@ -49,7 +49,7 @@ describe('Stack', () => {
     });
     it('Calling pop or peek on empty stack raises exception', () => {
       const stack = new StackAndQueues.Stack();
-      expect(stack.peek()).toEqual('this Stack is empty you should enqueue value first.');
+      expect(stack.peek()).toEqual('this Stack is empty you should push value first.');
     });
     it('points to the new head after pop()', () => {
       const stack = new StackAndQueues.Stack();
@@ -85,9 +85,9 @@ describe('Queue', () => {
     it('Can successfully enqueue into a queue', () => {
       const stack = new StackAndQueues.Queue();
       stack.enqueue(1);
-      expect(stack.front).toEqual(1);
+      expect(stack.front.value).toEqual(1);
       stack.enqueue(2);
-      expect(stack.front).toEqual(2);
+      expect(stack.front.value).toEqual(2);
     });
     it('Can successfully enqueue multiple values into a queue', () => {
       const stack = new StackAndQueues.Queue();
@@ -100,7 +100,7 @@ describe('Queue', () => {
     it('Can successfully dequeue out of a queue the expected value', () => {
       const stack = new StackAndQueues.Queue();
       stack.enqueue(1);
-      expect(stack.dequeue()).toEqual(1);
+      expect(stack.dequeue()).toEqual({ value: 1, next: null });
       expect(stack.front).toEqual(null);
     });
     it('Can successfully empty a stack after multiple dequeue', () => {
@@ -108,9 +108,9 @@ describe('Queue', () => {
       stack.enqueue(1);
       stack.enqueue(2);
       stack.enqueue(3);
-      expect(stack.dequeue()).toEqual(1);
-      expect(stack.dequeue()).toEqual(2);
-      expect(stack.dequeue()).toEqual(3);
+      expect(stack.dequeue()).toEqual({ value: 3, next: { value: 2, next: { value: 1, next: null} } });
+      expect(stack.dequeue()).toEqual({ value: 2, next: { value: 1, next: null} });
+      expect(stack.dequeue()).toEqual({ value: 1, next: null});
       expect(stack.front).toEqual(null);
     });
   });
@@ -131,7 +131,7 @@ describe('Queue', () => {
       stack.enqueue(2);
       stack.enqueue(1);
       stack.dequeue();
-      expect(stack.peek()).toEqual(1);
+      expect(stack.peek()).toEqual(2);
       stack.dequeue();
       stack.dequeue();
       expect(stack.peek()).toEqual('this Queue is empty you should enqueue value first.');
