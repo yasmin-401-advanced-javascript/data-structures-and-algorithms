@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 function binarySearch(arr, num) {
   for (let i = 0; i < arr.length; i++) {
