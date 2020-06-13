@@ -7,7 +7,6 @@ class Node {
 
 class AnimalShelter{
   constructor(){
-    this.storge = [];
     this.front = null;
   }
 
