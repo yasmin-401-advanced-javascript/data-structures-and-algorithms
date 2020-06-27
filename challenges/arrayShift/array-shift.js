@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 function insertShiftArray(arr, newInd) {
   let mid = Math.ceil(arr.length / 2);
