@@ -23,4 +23,4 @@ time big O(1)
 
 ## Solution
 
-![whiteBoard](./assets/arrayBinarySearch.jpg)
+![whiteBoard](./assets/uml.jpg)
